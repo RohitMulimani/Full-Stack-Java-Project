@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ATM Login</title>
-  <link rel="stylesheet" href="login.css">
-</head>
-<body>
-  <div class="atm-container">
-    <div class="atm-card">
-      <div class="bank-logo">🏛️ BANK</div>
-      <h1>WELCOME TO ATM</h1>
-      <form>
-        <label for="card-number">Card No:</label>
-        <input type="text" id="card-number" name="card-number" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ATM Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="atm-container">
+      <div class="atm-card">
+        <div class="bank-logo">🏛️ BANK</div>
+        <h1>WELCOME TO ATM</h1>
 
-        <label for="pin">PIN:</label>
-        <input type="password" id="pin" name="pin" required>
+        <form onsubmit="handleSignIn(event)">
+          <label for="card-number">Card No:</label>
+          <input type="text" id="card-number" name="card-number" required />
 
-        <div class="button-group">
-          <button type="submit" class="signin">SIGN IN</button>
-          <button type="reset" class="clear">CLEAR</button>
-        </div>
+          <label for="pin">PIN:</label>
+          <input type="password" id="pin" name="pin" required />
 
-        <button type="button" class="signup">SIGN UP</button>
-      </form>
-      <div class="card-image">💳</div>
+          <div class="button-group">
+            <button type="submit" class="signin">SIGN IN</button>
+            <button type="reset" class="clear">CLEAR</button>
+          </div>
+
+          <button type="button" class="signup" onclick="redirectToSignup()">
+            SIGN UP
+          </button>
+        </form>
+
+        <div class="card-image">💳</div>
+      </div>
     </div>
-  </div>
-</body>
+
+    <script>
+      function handleSignIn(event) {
+        event.preventDefault();
+        window.location.href = "Frontend.html";
+      }
+      function redirectToSignup() {
+        window.location.href = "form.html";
+      }
+    </script>
+  </body>
 </html>
