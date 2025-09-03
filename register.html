@@ -9,8 +9,6 @@
   <body>
     <div class="atm-container">
       <div class="atm-card">
-        <div class="bank-logo">🏛️ BANK</div>
-        <h1>WELCOME TO ATM</h1>
 
         <form onsubmit="handleSignIn(event)">
           <label for="card-number">Card No:</label>
@@ -19,13 +17,12 @@
           <label for="pin">PIN:</label>
           <input type="password" id="pin" name="pin" required />
 
-          <div class="button-group">
-            <button type="submit" class="signin">SIGN IN</button>
-            <button type="reset" class="clear">CLEAR</button>
-          </div>
+          <label for="balance">Balance:</label>
+          <input type="text" id="balance" name="balance" required />
 
+          <!-- Register button -->
           <button type="button" class="signup" onclick="redirectToSignup()">
-            SIGN UP
+            REGISTER
           </button>
         </form>
 
@@ -34,12 +31,14 @@
     </div>
 
     <script>
+      function redirectToSignup() {
+        // Redirect to registration page instead of login page
+        window.location.href = "login.html";  
+      }
+
       function handleSignIn(event) {
         event.preventDefault();
-        window.location.href = "Frontend.html"; 
-      }
-      function redirectToSignup() {
-        window.location.href = "register.html"; 
+        alert("Sign in logic here!");
       }
     </script>
   </body>
