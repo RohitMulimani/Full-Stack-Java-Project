@@ -15,13 +15,78 @@ body {
 
 .atm-container {
   background-color: #008cba;
+  padding: 20px;
+  border-radius: 10px;* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #fdb813, #00a8cc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atm-container {
+  background-color: #008cba;
   padding: 40px;
   border-radius: 10px;
   width: 350px;
+  min-height: 390px;   /* 🔹 Adjusted height for new OTP field */
   color: white;
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   position: relative;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px; /* space for card image */
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.card-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+}
+
+  width: 350px;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden; /* Prevent content spilling */
+}
+
 
 .bank-logo {
   text-align: center;
@@ -38,6 +103,7 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px; /* space for card image */
 }
 
 label {
